@@ -4,6 +4,7 @@
 # --- Part 1: Warm-up & Review (Discussion) ---
 # - Briefly review variables and data types from Week 1.
 # - (int, float, str, bool)
+print("--- Part 1: Recap ---")
 
 
 # --- Part 2: Conditionals (if/elif/else) ---
