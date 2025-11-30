@@ -13,6 +13,13 @@
 # Bonus: Can you also handle the case where the age is exactly 18?
 print("--- Exercise 1 ---")
 # Write your code for Exercise 1 here
+user_age = 18
+if user_age > 18:
+    print("yes vote")
+elif user_age < 18:
+    print("no")
+else: # user_age == 18
+    print("yes")
 
 
 print("-" * 20)
@@ -31,6 +38,8 @@ print("-" * 20)
 numbers = [10, 5, 8, 20, 3]
 print("--- Exercise 2 ---")
 # Write your code for Exercise 2 here
+for num in numbers:
+    print(f"{num} * 2 = {num*2}")
 
 
 print("-" * 20)
@@ -53,6 +62,23 @@ print("-" * 20)
 print("--- Exercise 3 ---")
 # Write your function definition and function call for Exercise 3 here
 
+def is_eligible_to_vote(age):
+
+    return age >= 18
+    # 25 >= 18 => True
+    # 12 >= 18 => False
+
+    if age >= 18:
+        return True
+    elif age < 18:
+        return False
+
+
+can_vote = is_eligible_to_vote(25)
+print(f"Is a 25-year-old eligible to vote? {can_vote}")
+
+cannot_vote = is_eligible_to_vote(12)
+print(f"{cannot_vote}")
 
 print("-" * 20)
 
@@ -75,6 +101,16 @@ print("-" * 20)
 # print(f"The positive numbers are: {positive_only}") # Expected output: [10, 8, 1]
 print("--- Final Challenge ---")
 # Write your code for the Final Challenge here
+def filter_positive_numbers(number: list[int]):
+    postiive_numbers = []
+    for num in number:
+        if num > 0:
+            postiive_numbers.append(num)
+    return postiive_numbers
+
+mixed_numbers = [-5, 10, -3, 8, 0, 1]
+positive_only = filter_positive_numbers(mixed_numbers)
+print(f"The positive numbers are: {positive_only}")
 
 
 print("-" * 20)
